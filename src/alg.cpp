@@ -22,15 +22,21 @@ bool checkPrime(uint64_t value) {
 
 uint64_t nPrime(uint64_t n) {
 // вставьте код функции
-  	uint64_t result = 0; 
-	uint64_t temp_n = n;
-	while (1) {
-		if (checkPrime(temp_n)) {
-			result = temp_n;
-			break;
-		} 
-		temp_n++;
-	} 
+	uint64_t result = 0; 
+	uint64_t temp_count  = 0;
+	uint64_t temp_number = 1;
+	if (n <= 0)
+		return result;
+	while (temp_count < n)
+	{
+		temp_number++;
+		if (checkPrime(temp_number))
+		{
+			temp_count++;
+		}
+	}
+	 result = temp_number;
+
 	return result;
 }
 
