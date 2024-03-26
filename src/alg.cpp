@@ -11,9 +11,9 @@ bool checkPrime(uint64_t value) {
                          break;
                         }
                   }
-             }
-           else result = false;
+             } else result = false; {
          return result;
+           }
 }
 
 uint64_t nPrime(uint64_t n) {
